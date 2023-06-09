@@ -6,7 +6,8 @@ import unittest
 
 # TODO Create a class called student with the member variables and
 #  methods used in the test class below to make all the tests pass
-
+class Student:
+    def __init__(self, grade, )
 
 # ================== DO NOT MODIFY THE CODE BELOW ============================
 

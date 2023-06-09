@@ -22,7 +22,7 @@ class Animal:
 
 # Classes can inherit other classes by putting the super class inside
 # parenthesis after the class name, Duck(SuperClass)
-class Duck(Animal):
+class Duck(Animal,):
     # Static variables go here. They can be used using the class name,
     # Duck.num_ducks_created
     num_ducks_created = 0
@@ -30,7 +30,7 @@ class Duck(Animal):
     # This is a constructor! It's called when an object of this class
     # is created. The 'self' variable is always the first input parameter
     # and is used to create instance variables and call methods.
-    def __init__(self, name,identity_fraud,crime):
+    def __init__(self, name, action, wonder):
 
         Duck.num_ducks_created = Duck.num_ducks_created + 1
 
@@ -38,31 +38,30 @@ class Duck(Animal):
         # the constructor
         self.new_instance_variable = 'A new instance variable!'
         self.name = name
-        self.identity_fraud=identity_fraud
-        self.crime=crime
+        self.action = action
+        self.wonder = wonder
+
 
         # This is a local variable and can only be used in the constructor
         new_local_variable = 'A new local variable!'
 
         # Calling a method also begins with '.self'
         self.initialize()
-        self.hell()
-        self.die()
-
+        self.perform()
+        self.execute()
     # This is a method!
     def initialize(self):
         # The instance variable can be used throughout the class
         print(self.name + ' the Duck was created!')
-    def hell(self):
-        print(self.identity_fraud + 'identity')
-    def die(self):
-        print(self.crime + 'War')
-
+    def perform(self):
+        print(self.action + ' was an action performed by ' +self.name)
+    def execute(self):
+        print(self.wonder + ' was thought about by ' +self.name)
 
 if __name__ == '__main__':
     # TODO 1) Create an object of the Duck class, for example
     #  kenny = Duck('Kenny')
-    kenny=Duck('Kenny')
+    kenny = Duck('Kenny', 'dialing 911', 'space')
     # TODO 2) Add 2 more input variables into the Duck constructor
 
     # TODO 3) Create 2 instance variables in the Duck class
@@ -72,7 +71,8 @@ if __name__ == '__main__':
 
     # TODO 5) Create 2 more Ducks with different names and call the methods
     #  created in the previous step
-
+    dave = Duck('dave', 'walking across the street', 'why')
+    kent = Duck('kent', 'hi', 'hi')
     if Duck.num_ducks_created < 3:
         print('There are only ' + str(Duck.num_ducks_created) + ' Ducks.')
         print('Create more Ducks!!!')
