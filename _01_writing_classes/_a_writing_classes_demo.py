@@ -22,7 +22,7 @@ class Animal:
 
 # Classes can inherit other classes by putting the super class inside
 # parenthesis after the class name, Duck(SuperClass)
-class Duck(Animal,):
+class Duck(Animal):
     # Static variables go here. They can be used using the class name,
     # Duck.num_ducks_created
     num_ducks_created = 0
