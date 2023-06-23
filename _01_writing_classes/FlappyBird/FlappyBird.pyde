@@ -13,23 +13,25 @@ def setup():
     
     # 3. Use the loadImage function to inialize the bg variable with the
     # flappyBackground.jpg image 
-    loadImage.flappyBackground.jpg
+    bg=loadImage("flappyBackground.jpg")
+    bg.resize(800,800)
     # 4. Resize the background to the width and height of the program
-    size.flappyBackground.jpg(800,800)
+    background(bg)
     # 5. Use the Bird class defined below to create a Bird object.
     # The bird image is named 'bird.png'
-    
+    bird=Bird(bird.png,0,400)
     # 6. Use the Pipe class defined below to create 2 Pipe objects,
     # one pipe at the top and one at the bottom.
     # The pipe images are named, "topPipe.png" and "bottomPipe.png"  
-
+    top_pipe=Pipe(topPipe.png,0,0)
+    bottom_pipe=Pipe(bottomPipe.png,0,0)
     # 7. Call the reset_pipes function to set the initial positions
     # of the pipes
-
+    reset_pipes(lower_pipe,upper_pipe)
 def draw():
     pass
     # 8. Remove the comment (the '#') in the line below
-    #global bg, bird, lower_pipe, upper_pipe
+    global bg, bird, lower_pipe, upper_pipe
     
     # 9. Use the background function to draw the game's background
 
@@ -56,19 +58,19 @@ def draw():
     
 
 class Bird:
-    def __init__(self, image_file, bird_x, bird_y):
+    def __init__(self, image_file, bird_x, bird_y,gravity,flap):
         self.x = bird_x
         self.y = bird_y
         self.width = 50
         self.height = ( 3 * self.width ) / 4
         self.image = loadImage(image_file)
         self.image.resize(self.width, self.height)
-        
+        self.gravity = -5
         # 11. Initialize a member variable for gravity (typically 1 to 5)
-        
+        self.flap = 40
         # 12. Add a member variable for the distance the bird travels
         # upward when it flaps (jumps)
-        
+        self.update
     # 13. Create an update method that will update the bird's position
     # while the game runs
 
