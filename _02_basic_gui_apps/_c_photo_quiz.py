@@ -24,22 +24,26 @@ def create_image(filename, width, height):
 #  to use those)
 
 # TODO 1) Create a new tkinter class
-
+class grahhh(tk.Tk):
     # TODO 2) Create a constructor
-
+    def __init__(self):
         # TODO 3) call Tk's constructor
-
+        super().__init__()
         # TODO 4) Create a member variable for a label and place it.
         #  You do not need to add any text or images to the label.
-
+        self.label = tk.Label(self, text="Please help me!!!", bg='red',
+                              fg='black', font=('arial', 32, 'bold'), relief='solid')
 
 # TODO 5) Create an if __name__ == '__main__': block
-
+        if __name__ == '__main__':
     # TODO 6) Create an object of the tkinter class
+            Quiz=grahhh()
+            Quiz.geometry('600x600')
 
     # TODO 7) Set the app window width and height using geometry()
 
     # TODO 8) Declare and initialize a score variable
+            score=0
 
     # TODO 9) Create an image object variable using the create_image function
     #  above and store it in a variable
