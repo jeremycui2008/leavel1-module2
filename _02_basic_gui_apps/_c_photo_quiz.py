@@ -11,7 +11,7 @@ def create_image(filename, width, height):
 
     try:
         image = Image.open(filename)
-        image = image.resize((width, height), Image.ANTIALIAS)
+        image = image.resize((width, height), Image.Resampling.LANCZOS)
         image_obj = ImageTk.PhotoImage(image=image)
     except FileNotFoundError as fnf:
         print("ERROR: Unable to find file " + filename)
@@ -35,29 +35,37 @@ class grahhh(tk.Tk):
                               fg='black', font=('arial', 32, 'bold'), relief='solid')
 
 # TODO 5) Create an if __name__ == '__main__': block
-        if __name__ == '__main__':
+if __name__ == '__main__':
     # TODO 6) Create an object of the tkinter class
-            Quiz=grahhh()
-            Quiz.geometry('600x600')
+    Quiz=grahhh()
+    Quiz.geometry('600x600')
 
     # TODO 7) Set the app window width and height using geometry()
 
     # TODO 8) Declare and initialize a score variable
-            score=0
+    score=0
 
     # TODO 9) Create an image object variable using the create_image function
     #  above and store it in a variable
+    hello = create_image('carrots.jpg',400,400)
+
 
     # TODO 10) Set the image onto the class's label using the configure method,
     #  for example:
     #  app.photo_label.configure(image=image_object)
+    Quiz.label.configure(image=hello)
 
     # TODO 11) Use a pop-up (simpledialog) to ask the user a question
     #  relating to the image and tell them if they get the right answer.
+    carrot = simpledialog.askstring('hi', 'what is this image of?')
 
     # TODO 12) If the answer is correct, increase the score by 1
-
+    if carrot=='carrot':
+        score+=1
     # TODO 13) Repeat the steps to show a different photo and ask a different
     #  question
 
+
     # TODO 14) Display the score to the user after asking the last question
+    print(score)
+    Quiz.mainloop()
