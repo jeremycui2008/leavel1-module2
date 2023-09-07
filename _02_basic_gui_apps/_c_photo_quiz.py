@@ -38,7 +38,7 @@ class grahhh(tk.Tk):
 if __name__ == '__main__':
     # TODO 6) Create an object of the tkinter class
     Quiz=grahhh()
-    Quiz.geometry('600x600')
+    Quiz.geometry('800x800')
 
     # TODO 7) Set the app window width and height using geometry()
 
@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     # TODO 9) Create an image object variable using the create_image function
     #  above and store it in a variable
-    hello = create_image('carrots.jpg',400,400)
+    hello = create_image('carrots.jpg',600,600)
 
 
     # TODO 10) Set the image onto the class's label using the configure method,
@@ -60,7 +60,7 @@ if __name__ == '__main__':
     carrot = simpledialog.askstring('hi', 'what is this image of?')
 
     # TODO 12) If the answer is correct, increase the score by 1
-    if carrot=='carrot':
+    if carrot=='carrots':
         score+=1
     # TODO 13) Repeat the steps to show a different photo and ask a different
     #  question
