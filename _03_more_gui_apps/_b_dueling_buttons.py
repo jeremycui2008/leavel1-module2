@@ -44,7 +44,8 @@ class dueling_buttons(tk.Tk):
 if __name__=='__main__':
     # TODO 9) Create an object of the dueling buttons class
     duel=dueling_buttons
+    duel.title=('hi!')
     # TODO 10) Set the object's width and size using the geometry method
-    duel.geometry('800x800')
+    duel.geometry("800,800")
     # TODO 11) Call the object's mainloop method
     duel.mainloop()
