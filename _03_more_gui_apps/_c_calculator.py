@@ -9,7 +9,28 @@ import tkinter as tk
 class calculator(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.multiplication = tk.Button(self, text="hi there!")
-        self.addition = tk.Button()
-        self.subtraction = tk.button()
-        self.division = tk.button()
+        self.multiplication = tk.Button(self, text="hi there!", fg='red',
+                                        font=('courier new', 16, 'bold'))
+        self.multiplication.place(relx=0.1, rely=0.5, relwidth=0.8, relheight=0.2)
+        self.addition = tk.Button(self, text="hi there!", fg='red',
+                                        font=('courier new', 16, 'bold'))
+        self.addition.place(relx=0.1, rely=0.5, relwidth=0.8, relheight=0.2)
+        self.subtraction = tk.Button(self, text="hi there!", fg='red',
+                                        font=('courier new', 16, 'bold'))
+        self.subtraction.place(relx=0.1, rely=0.5, relwidth=0.8, relheight=0.2)
+        self.division = tk.Button(self, text="hi there!", fg='red',
+                                        font=('courier new', 16, 'bold'))
+        self.division.place(relx=0.1, rely=0.5, relwidth=0.8, relheight=0.2)
+
+        def multiply_pressed(self):
+            self.multiplication.place()
+        def addition_preessed(self):
+            self.addition.place()
+        def subtraction_pressed(self):
+            self.subtraction.place()
+        def division_pressed(self):
+            self.division.place()
+
+if __name__=='__main__':
+    math = calculator
+    math.title('KILL YOURSELF')
