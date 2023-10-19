@@ -2,10 +2,12 @@
 Create a simple calculator app
 """
 import tkinter as tk
+from tkinter import messagebox, simpledialog
 
 # TODO Make a calculator app like the one shown in the calculator.png image
 #  located in this folder.
 #  HINT: you'll need: 2 text fields, 4 buttons, and 1 label
+
 class calculator(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -24,8 +26,11 @@ class calculator(tk.Tk):
 
         def multiply_pressed(self):
             self.multiplication.place()
+            bee = simpledialog.askinterger('enter', 'enter the first number you wanna multiply')
         def addition_preessed(self):
             self.addition.place()
+            yep=simpledialog.askstring('kindly enter number',)
+            qhar=simpledialog.askstring('kindly enter 2',)
         def subtraction_pressed(self):
             self.subtraction.place()
         def division_pressed(self):
@@ -33,4 +38,4 @@ class calculator(tk.Tk):
 
 if __name__=='__main__':
     math = calculator
-    math.title('KILL YOURSELF')
+    math.title('calc')
