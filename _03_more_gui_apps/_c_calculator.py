@@ -13,39 +13,39 @@ class Calculator(tk.Tk):
         super().__init__()
         self.multiplication = tk.Button(self, text="x", fg='red',
                                         font=('courier new', 16, 'bold'), command=lambda : self.multiply_pressed())
-        self.multiplication.place(relx=1, rely=1, relwidth=0.2, relheight=0.2)
+        self.multiplication.place(relx=0.6, rely=0.6, relwidth=0.2, relheight=0.2)
         self.addition = tk.Button(self, text="+", fg='red',
                                         font=('courier new', 16, 'bold'), command=lambda : self.addition_pressed())
-        self.addition.place(relx=0.75, rely=0.75, relwidth=0.2, relheight=0.2)
+        self.addition.place(relx=0.6, rely=0.2, relwidth=0.2, relheight=0.2)
         self.subtraction = tk.Button(self, text="-", fg='red',
                                         font=('courier new', 16, 'bold'), command=lambda : self.subtraction_pressed())
-        self.subtraction.place(relx=0.5, rely=0.5, relwidth=0.2, relheight=0.2)
+        self.subtraction.place(relx=0.2, rely=0.6, relwidth=0.2, relheight=0.2)
         self.division = tk.Button(self, text="/", fg='red',
                                         font=('courier new', 16, 'bold'), command=lambda : self.division_pressed())
-        self.division.place(relx=0.25, rely=0.25, relwidth=0.2, relheight=0.2)
+        self.division.place(relx=0.2, rely=0.2, relwidth=0.2, relheight=0.2)
 
     def multiply_pressed(self):
         self.multiplication.place()
-        bee = simpledialog.askinteger(title='enter', prompt='enter the first number you wanna multiply')
-        mult_2=simpledialog.askinteger(title='second number', prompt='')
+        bee = simpledialog.askfloat(title='enter', prompt='enter the first number you wanna multiply')
+        mult_2=simpledialog.askfloat(title='second number', prompt='')
         multiplication=bee*mult_2
         print(multiplication)
     def addition_pressed(self):
         self.addition.place()
-        add_1=simpledialog.askinteger(title='kindly enter number',prompt='number 1')
-        add_2=simpledialog.askinteger(title='kindly enter the second number',prompt='number 2')
+        add_1=simpledialog.askfloat(title='kindly enter number',prompt='number 1')
+        add_2=simpledialog.askfloat(title='kindly enter the second number',prompt='number 2')
         addition=add_1+add_2
         print(addition)
     def subtraction_pressed(self):
         self.subtraction.place()
-        sub_1=simpledialog.askinteger(title='number 1',prompt='number 1')
-        sub_2=simpledialog.askinteger(title='number 2',prompt='numer 2')
+        sub_1=simpledialog.askfloat(title='number 1',prompt='number 1')
+        sub_2=simpledialog.askfloat(title='number 2',prompt='numer 2')
         subtraction=sub_1-sub_2
         print(subtraction)
     def division_pressed(self):
         self.division.place()
-        div_1=simpledialog.askinteger(title='number 1',prompt='number 1')
-        div_2=simpledialog.askinteger(title='number 2',prompt='number 2')
+        div_1=simpledialog.askfloat(title='number 1',prompt='number 1')
+        div_2=simpledialog.askfloat(title='number 2',prompt='number 2')
         division=div_1/div_2
         print(division)
 if __name__=='__main__':
