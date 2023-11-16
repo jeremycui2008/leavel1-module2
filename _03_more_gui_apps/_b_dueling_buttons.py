@@ -25,6 +25,7 @@ class dueling_buttons(tk.Tk):
         self.button_right = tk.Button(self, text='Click me!', fg='red',
                                 font=('courier new', 16, 'bold'), command=self.right_button_pressed)
         self.button_right.place(relx=0.1, rely=0.5, relwidth=0.8, relheight=0.2)
+        new_duel=dueling_buttons('hi')
     # TODO 5) For the left button, add: command=self.left_button_pressed
     #  For the right button, add: command=self.right_button_pressed
 

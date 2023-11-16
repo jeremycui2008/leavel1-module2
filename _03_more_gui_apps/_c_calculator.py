@@ -11,7 +11,7 @@ from tkinter import messagebox, simpledialog
 class Calculator(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.multiplication = tk.Button(self, text="x", fg='red',
+        self.multiplication = tk.Button(self, text="*", fg='red',
                                         font=('courier new', 16, 'bold'), command=lambda : self.multiply_pressed())
         self.multiplication.place(relx=0.6, rely=0.6, relwidth=0.2, relheight=0.2)
         self.addition = tk.Button(self, text="+", fg='red',

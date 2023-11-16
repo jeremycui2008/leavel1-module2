@@ -53,7 +53,7 @@ if __name__ == '__main__':
     # TODO 10) Create an object of your app class
     App = yipee()
     # TODO 11) Use the app object to set a title
-    App.title('HELP HELP ME')
+    App.title('HELP! HELP ME')
     # TODO 12) Use the app object to set the window dimensions (width x height)
     App.geometry('600x600')
     # TODO 13) Run the app object's mainloop() method
