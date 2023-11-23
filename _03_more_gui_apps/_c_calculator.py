@@ -42,6 +42,10 @@ class Calculator(tk.Tk):
         sub_2=simpledialog.askfloat(title='number 2',prompt='numer 2')
         subtraction=sub_1-sub_2
         print(subtraction)
+        if sub_1==69:
+            print('nice')
+        else:
+            print('lame')
     def division_pressed(self):
         self.division.place()
         div_1=simpledialog.askfloat(title='number 1',prompt='number 1')
